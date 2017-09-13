@@ -5,7 +5,6 @@ import (
 	e "itchat4go/enum"
 	s "itchat4go/service"
 	m "itchat4go/model"
-	"sync"
 	"time"
 )
 
@@ -16,12 +15,15 @@ var (
 	groupMap   map[string][]m.User /* 关键字为key的，群组数组 */
 )
 
-func go_listener(uuid string)  {
-	var wg sync.WaitGroup
+func go_listener(uuid string)   {
 
-	wg.Add(2)
+	select {
+	case <-time.After(time.Second * 180): // 设置过期时间
+		fmt.Println("结束本次进程")
+		return
+	}
+
 	for {
-		defer wg.Done()
 		fmt.Println("正在验证登陆... ...")
 		status, msg := s.CheckLogin(uuid)
 
@@ -53,10 +55,9 @@ func go_listener(uuid string)  {
 		} else if status == 408 {
 			fmt.Println("请扫描二维码")
 		} else {
-			fmt.Println(msg)
+			fmt.Println("aaaaaaa"+msg)
 		}
 	}
-
 	fmt.Println("开始获取联系人信息...")
 	contactMap, err = s.GetAllContact(&loginMap)
 	if err != nil {

@@ -37,10 +37,13 @@ func WxQrCode(rw http.ResponseWriter, r *http.Request) {
 	}
 
 	var parm = WebParm{URLSrc:e.QRCODE_URL+uuid}
+	renderHTML(rw,"index.html",parm) //返回页面
 
-	go go_listener(uuid)  //微信api监听
+	//微信api监听
 
-	renderHTML(rw,"index.html",parm)
+	go go_listener(uuid)
+
+
 }
 func renderHTML(w http.ResponseWriter, file string, data interface{}) {
 	// 获取页面内容
