@@ -166,6 +166,7 @@ func SendMsg(loginMap *m.LoginMap, wxSendMsg m.WxSendMsg) error {
 	// TODO: 发送微信消息时暂不处理返回值
 	_, err = http.Post(e.WEB_WX_SENDMSG_URL+t.GetURLParams(urlMap), e.JSON_HEADER, strings.NewReader(string(jsonBytes)))
 	if err != nil {
+		fmt.Println(err)
 		return err
 	}
 

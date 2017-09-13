@@ -2,29 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85e3efb6-5c1a-4a96-b51d-db85f1cb2e63" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/demo.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/itchat4go/enum/group.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/itchat4go/enum/params_enum.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/itchat4go/enum/urlenum.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/itchat4go/model/app_model.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/itchat4go/model/wx_model.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/itchat4go/service/contact_service.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/itchat4go/service/login_service.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/itchat4go/service/msg_service.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/itchat4go/test/demo1_test.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/itchat4go/tools/string_tools.go" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/enum/group.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/enum/params_enum.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/enum/urlenum.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/model/app_model.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/model/wx_model.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/service/contact_service.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/service/login_service.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/service/msg_service.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/demo1_test.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/string_tools.go" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/itchat4go/test/web_test.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/itchat4go/view/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/itchat4go/webservice/webservice.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/itchat4go/webservice/wxservice.go" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/itchat4go/service/msg_service.go" afterPath="$PROJECT_DIR$/src/itchat4go/service/msg_service.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,39 +30,119 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="contact_service.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/itchat4go/service/contact_service.go">
+      <file leaf-file-name="webservice.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/itchat4go/webservice/webservice.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="demo.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/demo.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="30" column="25" lean-forward="false" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+            <state relative-caret-position="541">
+              <caret line="60" column="18" lean-forward="true" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
               <folding>
-                <element signature="e#14#141#0" expanded="true" />
+                <element signature="e#20#130#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login_service.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/itchat4go/service/login_service.go">
+      <file leaf-file-name="wxservice.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/itchat4go/webservice/wxservice.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="63" column="19" lean-forward="true" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
+            <state relative-caret-position="154">
+              <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="msg_service.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/itchat4go/service/msg_service.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-47">
+              <caret line="172" column="14" lean-forward="true" selection-start-line="172" selection-start-column="14" selection-end-line="172" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wx_model.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/itchat4go/model/wx_model.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="49" column="5" lean-forward="false" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app_model.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/itchat4go/model/app_model.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login_service.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/itchat4go/service/login_service.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="55" column="17" lean-forward="true" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/itchat4go/view/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="group.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/itchat4go/enum/group.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1705">
+              <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demo1_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/itchat4go/test/demo1_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="98">
+              <caret line="16" column="32" lean-forward="false" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+              <folding>
+                <element signature="e#14#135#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>panicErr</find>
+      <find>loginMap</find>
+      <find>wxRecvMsges</find>
+      <find>77a3789bbb9ff6f252fceefa1cc70d307b7028d7c44daf68f262d9a0e3eaa7f2</find>
+      <find>f9626b4d0ecaf8ccc0d4daacb13acb0342972b31240fd8deaebb6f82515a6c03</find>
+      <find>番茄</find>
+    </findStrings>
   </component>
   <component name="GOROOT" path="C:\Go" />
   <component name="Git.Settings">
@@ -96,6 +159,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/service/contact_service.go" />
+        <option value="$PROJECT_DIR$/src/itchat4go/test/web_test.go" />
+        <option value="$PROJECT_DIR$/src/itchat4go/view/index.html" />
+        <option value="$PROJECT_DIR$/src/itchat4go/webservice/wxqf.go" />
+        <option value="$PROJECT_DIR$/src/itchat4go/webservice/webservice.go" />
+        <option value="$PROJECT_DIR$/src/itchat4go/service/msg_service.go" />
+        <option value="$PROJECT_DIR$/src/itchat4go/webservice/wxservice.go" />
       </list>
     </option>
   </component>
@@ -136,6 +205,11 @@
             <path>
               <item name="itchat4go" type="b2602c69:ProjectViewProjectNode" />
               <item name="itchat4go" type="462c0819:PsiDirectoryNode" />
+              <item name="qrcode" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="itchat4go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="itchat4go" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -149,7 +223,18 @@
               <item name="itchat4go" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="itchat4go" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="itchat4go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="itchat4go" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="itchat4go" type="462c0819:PsiDirectoryNode" />
+              <item name="webservice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="itchat4go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -160,11 +245,14 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HelloWorld" />
     <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="GO_FMT" value="false" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -178,7 +266,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Single File.go run demo.go">
+  <component name="RunManager" selected="Go Test.TestWebService in web_test.go">
+    <configuration name="TestWebService in web_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
+      <module name="itchat4go" />
+      <working_directory value="$PROJECT_DIR$/src/itchat4go/test" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="itchat4go/test" />
+      <pattern value="^TestWebService$" />
+    </configuration>
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="itchat4go" />
       <working_directory value="$PROJECT_DIR$" />
@@ -236,14 +333,51 @@
       <working_directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$/src/demo.go" />
     </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Go Single File.go run demo.go" />
+      <item index="1" class="java.lang.String" itemvalue="Go Test.TestWebService in web_test.go" />
+    </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Go Single File.go run demo.go" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Go Test.TestWebService in web_test.go" />
+        <item index="1" class="java.lang.String" itemvalue="Go Single File.go run demo.go" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="TestWebService_in_web_test_go - 2017.09.13 at 15h 21m 53s.xml">
+      <configuration name="TestWebService in web_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestWebService_in_web_test_go - 2017.09.13 at 15h 27m 24s.xml">
+      <configuration name="TestWebService in web_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestWebService_in_web_test_go - 2017.09.13 at 15h 27m 47s.xml">
+      <configuration name="TestWebService in web_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestWebService_in_web_test_go - 2017.09.13 at 15h 33m 02s.xml">
+      <configuration name="TestWebService in web_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestWebService_in_web_test_go - 2017.09.13 at 15h 50m 15s.xml">
+      <configuration name="TestWebService in web_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestWebService_in_web_test_go - 2017.09.13 at 15h 52m 02s.xml">
+      <configuration name="TestWebService in web_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestWebService_in_web_test_go - 2017.09.13 at 15h 52m 10s.xml">
+      <configuration name="TestWebService in web_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestWebService_in_web_test_go - 2017.09.13 at 15h 55m 24s.xml">
+      <configuration name="TestWebService in web_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestWebService_in_web_test_go - 2017.09.13 at 15h 59m 10s.xml">
+      <configuration name="TestWebService in web_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestWebService_in_web_test_go - 2017.09.13 at 16h 05m 38s.xml">
+      <configuration name="TestWebService in web_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -262,7 +396,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28616685" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -283,6 +417,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="改变结构" />
+    <option name="LAST_COMMIT_MESSAGE" value="改变结构" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
@@ -291,28 +429,169 @@
     <entry file="file://$PROJECT_DIR$/service/contact_service.go" />
     <entry file="file://$PROJECT_DIR$/service/contact_service.go" />
     <entry file="file://$PROJECT_DIR$/demo.go" />
+    <entry file="file://$PROJECT_DIR$/qrcode/qrcode.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/regexp/regexp.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="916" column="18" lean-forward="false" selection-start-line="916" selection-start-column="18" selection-end-line="916" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/itchat4go/enum/params_enum.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="802">
+          <caret line="52" column="23" lean-forward="false" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/itchat4go/service/contact_service.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        <state relative-caret-position="208">
+          <caret line="21" column="57" lean-forward="false" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+          <folding>
+            <element signature="e#17#178#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/itchat4go/enum/urlenum.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/itchat4go/test/demo1_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="16" column="32" lean-forward="false" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <folding>
+            <element signature="e#14#135#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/itchat4go/test/web_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding>
+            <element signature="e#14#59#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/net/dial.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="551" column="19" lean-forward="true" selection-start-line="551" selection-start-column="19" selection-end-line="551" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/itchat4go/enum/group.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1705">
+          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/net/http/server.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="1720" column="0" lean-forward="false" selection-start-line="1720" selection-start-column="0" selection-end-line="1720" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/itchat4go/view/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/itchat4go/service/login_service.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="55" column="17" lean-forward="true" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/builtin/builtin.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="225" column="5" lean-forward="false" selection-start-line="225" selection-start-column="5" selection-end-line="225" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/itchat4go/webservice/wxqf.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/demo.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="30" column="25" lean-forward="false" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+        <state relative-caret-position="571">
+          <caret line="55" column="42" lean-forward="false" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="42" />
           <folding>
             <element signature="e#14#141#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/itchat4go/service/login_service.go">
+    <entry file="file://$PROJECT_DIR$/src/itchat4go/model/app_model.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="63" column="19" lean-forward="true" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
+        <state relative-caret-position="323">
+          <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/itchat4go/model/wx_model.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="49" column="5" lean-forward="false" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/itchat4go/webservice/webservice.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="541">
+          <caret line="60" column="18" lean-forward="true" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
+          <folding>
+            <element signature="e#20#130#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/itchat4go/service/msg_service.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-47">
+          <caret line="172" column="14" lean-forward="true" selection-start-line="172" selection-start-column="14" selection-end-line="172" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/itchat4go/webservice/wxservice.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
           <folding />
         </state>
       </provider>
