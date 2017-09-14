@@ -1,4 +1,4 @@
-package main
+package test
 
 import (
 	"fmt"
@@ -10,6 +10,7 @@ import (
 	"regexp"
 	"strings"
 	"time"
+	"testing"
 )
 
 var (
@@ -20,7 +21,7 @@ var (
 	groupMap   map[string][]m.User /* 关键字为key的，群组数组 */
 )
 
-func main() {
+func Test_main(test *testing.T) {
 	/* 从微信服务器获取UUID */
 	uuid, err = s.GetUUIDFromWX()
 	if err != nil {

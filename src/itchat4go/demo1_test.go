@@ -1,4 +1,4 @@
-package test
+package main
 
 import (
 	"fmt"
@@ -77,6 +77,7 @@ func TTestLogin(test *testing.T) {
 			fmt.Println("请扫描二维码")
 		} else {
 			fmt.Println(msg)
+			break
 		}
 	}
 }

@@ -7,8 +7,11 @@
     <title>微信</title>
 </head>
 <body>
+<p>一个二维码只能一个人用，且30秒后过期</p>
 <div style="text-align: center;">
-    <img width="300px" src="{{.URLSrc}}">
+    <img width="300px" src="{{.UrlSrc}}">
+    <button onclick="javascript: window.location.reload();">刷 新</button>
 </div>
+
 </body>
 </html>

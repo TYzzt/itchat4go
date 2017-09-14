@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>设置消息</title>
+</head>
+<body>
+<div style="text-align: center;width: 90%">
+    <form action="./msgSetView" method="post">
+    <p>消息:</p>
+    <p><textarea style="height: 250px;width: 300px" name="msg" id="msg">{{.Qf_msg}}</textarea></p>
+        <button type="submit">提 交</button>
+        <select name="Qf_state">
+            <option value="true" {{if .Qf_state}} selected = "selected" {{end}}  >群发</option>
+            <option value="false" {{if not .Qf_state}} selected = "selected" {{end}}>测试</option>
+        </select>
+    </form>
+    <p>使用方法:一、修改消息的内容，选择测试或群发，并点提交按钮；二、展示二维码页面，扫码登陆</p>
+    <p>群发请谨慎使用，扫码登陆后自动群发；测试将会把提交的消息发送给赵涛</p>
+    <p><a href="./wxSendProcess">二维码页面</a></p>
+</div>
+</body>
+</html>

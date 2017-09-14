@@ -13,11 +13,13 @@ var (
 	loginMap   m.LoginMap
 	contactMap map[string]m.User
 	groupMap   map[string][]m.User /* 关键字为key的，群组数组 */
+	Qf_msg ="人是要有精神的~" //群发消息
+	Qf_state = false // false测试 true群发
 )
+
 
 /**
 	微信逻辑处理
-	30s过期
  */
 func go_listener(uuid string)   {
 
@@ -64,6 +66,7 @@ func go_listener(uuid string)   {
 				fmt.Println("请扫描二维码")
 			} else {
 				fmt.Println("aaaaaaa"+msg)
+				return
 			}
 		}
 		fmt.Println("开始获取联系人信息...")
@@ -72,25 +75,44 @@ func go_listener(uuid string)   {
 			panicErr(err)
 		}
 
-		fmt.Println(contactMap)
+		/*fmt.Println(contactMap)*/
 
-		for _,contact := range contactMap {
-			if contact.NickName=="赵涛" {
-				wxSendMsg := m.WxSendMsg{}
-				wxSendMsg.Type = 1
-				wxSendMsg.Content = "测试..."
-				wxSendMsg.FromUserName = loginMap.SelfUserName
-				wxSendMsg.ToUserName = contact.UserName
-				wxSendMsg.LocalID = fmt.Sprintf("%d", time.Now().Unix())
-				wxSendMsg.ClientMsgId = wxSendMsg.LocalID
+		if !Qf_state { //测试
+			for _,contact := range contactMap {
+				if contact.NickName=="赵涛" {
+					wxSendMsg := m.WxSendMsg{}
+					wxSendMsg.Type = 1
+					wxSendMsg.Content = Qf_msg
+					wxSendMsg.FromUserName = loginMap.SelfUserName
+					wxSendMsg.ToUserName = contact.UserName
+					wxSendMsg.LocalID = fmt.Sprintf("%d", time.Now().Unix())
+					wxSendMsg.ClientMsgId = wxSendMsg.LocalID
 
-				//加点延时，避免消息次序混乱，同时避免微信侦察到机器人
-				time.Sleep(time.Second)
+					//加点延时，避免消息次序混乱，同时避免微信侦察到机器人
+					time.Sleep(time.Second)
 
-				go s.SendMsg(&loginMap, wxSendMsg)
-				break
+					go s.SendMsg(&loginMap, wxSendMsg)
+					break
+				}
+			}
+		}else{  //群发
+			for _,contact := range contactMap {
+					wxSendMsg := m.WxSendMsg{}
+					wxSendMsg.Type = 1
+					wxSendMsg.Content = Qf_msg
+					wxSendMsg.FromUserName = loginMap.SelfUserName
+					wxSendMsg.ToUserName = contact.UserName
+					wxSendMsg.LocalID = fmt.Sprintf("%d", time.Now().Unix())
+					wxSendMsg.ClientMsgId = wxSendMsg.LocalID
+
+					//加点延时，避免消息次序混乱，同时避免微信侦察到机器人
+					time.Sleep(time.Second/2)
+
+					go s.SendMsg(&loginMap, wxSendMsg)
 			}
 		}
+
+
 		processout <- true //程序结束
 	}()
 
@@ -98,7 +120,7 @@ func go_listener(uuid string)   {
 	select {
 	case <-processout:
 		fmt.Println("正常退出")
-	case <-time.After(30 * time.Second):
+	case <-time.After(1000 * time.Second):
 		timeout<-true
 		fmt.Println("超时退出")
 	}
