@@ -16,6 +16,10 @@ type WebParm struct{
 	URLSrc string  //二维码url
 }
 
+
+/**
+开启web监听
+ */
 func BeginListene()  {
 	routes() //监听
 	log.Println("listener : Started : Listening on :4000")
@@ -24,9 +28,10 @@ func BeginListene()  {
 
 
 func routes() {
-	http.HandleFunc("/", WxQrCode)
+	http.HandleFunc("/wxSendProcess", WxQrCode)
 }
 
+var i = 0
 //二维码页面
 func WxQrCode(rw http.ResponseWriter, r *http.Request) {
 
@@ -35,15 +40,11 @@ func WxQrCode(rw http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		panicErr(err)
 	}
-
 	var parm = WebParm{URLSrc:e.QRCODE_URL+uuid}
 	renderHTML(rw,"index.html",parm) //返回页面
 
 	//微信api监听
-
 	go go_listener(uuid)
-
-
 }
 func renderHTML(w http.ResponseWriter, file string, data interface{}) {
 	// 获取页面内容
