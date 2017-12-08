@@ -1,0 +1,2 @@
+[default]
+qf_info=微信群发v0.2

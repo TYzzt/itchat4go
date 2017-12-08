@@ -2,10 +2,11 @@ package webservice
 
 import (
 	"fmt"
-	e "itchat4go/enum"
+	_ "itchat4go/enum"
 	s "itchat4go/service"
 	m "itchat4go/model"
 	"time"
+	"log"
 )
 
 var (
@@ -13,8 +14,9 @@ var (
 	loginMap   m.LoginMap
 	contactMap map[string]m.User
 	groupMap   map[string][]m.User /* 关键字为key的，群组数组 */
-	Qf_msg ="人是要有精神的~" //群发消息
+	Qf_msg ="人是要有精神的~" //群发默认消息
 	Qf_state = false // false测试 true群发
+	Qf_bgr = "金钊百货批发13932872008" //群发报告人
 )
 
 
@@ -57,8 +59,9 @@ func go_listener(uuid string)   {
 				}
 
 				fmt.Println("通知完毕,本次登陆信息：")
-				fmt.Println(e.SKey + "\t\t" + loginMap.BaseRequest.SKey)
-				fmt.Println(e.PassTicket + "\t\t" + loginMap.PassTicket)
+			/*	fmt.Println(e.SKey + "\t\t" + loginMap.BaseRequest.SKey)
+				fmt.Println(e.PassTicket + "\t\t" + loginMap.PassTicket)*/
+				log.Print(loginMap.SelfNickName+"登陆")
 				break
 			} else if status == 201 {
 				fmt.Println("请在手机上确认")
@@ -78,6 +81,7 @@ func go_listener(uuid string)   {
 		/*fmt.Println(contactMap)*/
 
 		if !Qf_state { //测试
+		fmt.Println(len(contactMap))
 			for _,contact := range contactMap {
 				if contact.NickName=="赵涛" {
 					wxSendMsg := m.WxSendMsg{}
@@ -96,23 +100,26 @@ func go_listener(uuid string)   {
 				}
 			}
 		}else{  //群发
+			var zInt = 0
 			for _,contact := range contactMap {
-					wxSendMsg := m.WxSendMsg{}
-					wxSendMsg.Type = 1
-					wxSendMsg.Content = Qf_msg
-					wxSendMsg.FromUserName = loginMap.SelfUserName
-					wxSendMsg.ToUserName = contact.UserName
-					wxSendMsg.LocalID = fmt.Sprintf("%d", time.Now().Unix())
-					wxSendMsg.ClientMsgId = wxSendMsg.LocalID
+				zInt++
+				if  zInt  % 100== 0 {
+					time.Sleep(time.Second*4)
+				}
 
-					//加点延时，避免消息次序混乱，同时避免微信侦察到机器人
-					time.Sleep(time.Second/2)
+				wxSendMsg := m.WxSendMsg{}
+				wxSendMsg.Type = 1
+				wxSendMsg.Content = Qf_msg
+				wxSendMsg.FromUserName = loginMap.SelfUserName
+				wxSendMsg.ToUserName = contact.UserName
+				wxSendMsg.LocalID = fmt.Sprintf("%d", time.Now().Unix())
+				wxSendMsg.ClientMsgId = loginMap.SelfNickName+"你好/n"+wxSendMsg.LocalID
 
-					go s.SendMsg(&loginMap, wxSendMsg)
+				//加点延时，避免消息次序混乱，同时避免微信侦察到机器人
+				time.Sleep(time.Second)
+				go s.SendMsg(&loginMap, wxSendMsg)
 			}
 		}
-
-
 		processout <- true //程序结束
 	}()
 
@@ -120,7 +127,7 @@ func go_listener(uuid string)   {
 	select {
 	case <-processout:
 		fmt.Println("正常退出")
-	case <-time.After(1000 * time.Second):
+	case <-time.After(3000 * time.Second):
 		timeout<-true
 		fmt.Println("超时退出")
 	}

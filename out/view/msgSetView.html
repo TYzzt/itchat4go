@@ -8,6 +8,9 @@
 </head>
 <body>
 <div style="text-align: center;width: 90%">
+    <div>
+        <input hidden id="ErrorMsg" value="{{.ErrorMsg}}">
+    </div>
     <form action="./msgSetView" method="post">
     <p>消息:</p>
     <p><textarea style="height: 250px;width: 300px" name="msg" id="msg">{{.Qf_msg}}</textarea></p>
@@ -23,6 +26,6 @@
 </div>
 </body>
 <script>
-    alert(1)
+
 </script>
 </html>

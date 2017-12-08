@@ -21,6 +21,7 @@ type WebParm struct{
 	Uuid string
 	Qf_msg string
 	Qf_state bool //群发还是测试
+	ErrorMsg int //提示 1提交成功
 }
 
 
@@ -62,13 +63,15 @@ func msgSetView(rw http.ResponseWriter, req *http.Request)  {
 	//设置消息
 	post_msg := req.PostFormValue("msg")
 	post_Qf_state := req.PostFormValue("Qf_state")
+	var msg = 0
 	if len(post_msg)>0 {
 		Qf_msg = post_msg
 	}
 	if len(post_Qf_state)> 0 {
 		Qf_state = post_Qf_state=="true"
+		msg = 1
 	}
-	var parm = WebParm{Qf_msg:Qf_msg,Qf_state:Qf_state}
+	var parm = WebParm{Qf_msg:Qf_msg,Qf_state:Qf_state,ErrorMsg:msg}
 	renderHTML(rw,"msgSetView.html",parm) //返回页面
 }
 
